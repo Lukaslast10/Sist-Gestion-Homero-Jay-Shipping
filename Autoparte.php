@@ -4,9 +4,9 @@ class Autoparte {
     private $nombre;
     private $desgaste;
 
-    public function __construct($nombre, $desgaste) {
+    public function __construct($nombre) {
         $this->nombre = $nombre;
-        $this->desgaste = $desgaste;
+        $this->desgaste = 0;
     }
     
     // Restaura el desgaste a 0 (como nuevo).
