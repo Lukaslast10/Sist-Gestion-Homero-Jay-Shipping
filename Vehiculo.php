@@ -7,7 +7,7 @@ abstract class Vehiculo
     protected $matricula;
     protected $capacidad;
     public $ruta = array();
-    public $carga; array();
+    public $carga = array();
     function __construct($empresa, $matricula, $capacidad){
         $this->$empresa;
         $this->$matricula;
@@ -25,7 +25,7 @@ abstract class Vehiculo
     }
     function asignar_carga($carga){
         # validar entrada de datos
-        \
+        
         # asignar a propiedad carga
     }
     function eliminar_carga($carga){
