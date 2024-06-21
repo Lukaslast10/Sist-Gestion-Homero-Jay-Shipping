@@ -1,6 +1,6 @@
 <?php
 
-class Autopartes {
+class Autoparte {
     private $nombre;
     private $desgaste;
 

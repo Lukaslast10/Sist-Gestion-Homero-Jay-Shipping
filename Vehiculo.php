@@ -1,23 +1,24 @@
 <?php
 include_once "./Autopartes.php";
+include_once "./Direccion.php";
+include_once "./utils.php";
+
 
 abstract class Vehiculo 
 {
     protected $empresa; 
     protected $matricula;
     protected $capacidad;
-    public $ruta = array();
-    public $carga = array();
-    function __construct($empresa, $matricula, $capacidad){
+    public $ruta;
+    public $carga;
+    function __construct(String $empresa, String $matricula, String $capacidad){
+        
         $this->$empresa;
         $this->$matricula;
         $this->$capacidad;
     }
     
     function asignar_ruta($ruta){
-        # validar entrada de datos
-        
-        # asignar a propiedad ruta
 
     }
     function eliminar_ruta($ruta){
