@@ -6,6 +6,8 @@ class VehiculoPropio extends Vehiculo {
 
     public function salir_a_reparto(){
         # codigo de comportamiento
+        //agregado a salir a reparto 
+        echo "Vehiculo salio a reparto "
     }
 
     public function __construct($empresa, $matricula, $capacidad, $autopartes) {
