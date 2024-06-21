@@ -6,8 +6,8 @@ abstract class Vehiculo
     protected $empresa; 
     protected $matricula;
     protected $capacidad;
-    $ruta = array();
-    $carga; array()
+    public $ruta = array();
+    public $carga; array();
     function __construct($empresa, $matricula, $capacidad){
         $this->$empresa;
         $this->$matricula;
