@@ -1,7 +1,12 @@
 <?php
+include_once './Vehiculo.php' 
 
 class VehiculoPropio extends Vehiculo {
     private $autopartes;
+
+    public function salir_a_reparto(){
+        # codigo de comportamiento
+    }
 
     public function __construct($empresa, $matricula, $capacidad, $autopartes) {
         parent::__construct($empresa, $matricula, $capacidad);
