@@ -1,5 +1,5 @@
 <?php
-
+include_once "./Vehiculo.php";
 class VehiculoTercerizado extends Vehiculo {
     private $nombreEmpresa;
 
