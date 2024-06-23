@@ -53,7 +53,7 @@ class Producto{
          }
       }
       // crear una instancia de la clase Producto
-      $producto = new producto("vehiculo" , 10 , "kg" ,true); //preguntar a Joel
+      $producto = new producto("vehiculo" , 10 , "kg" ,true); //
       
       //mostrar información del producto
       $producto->mostrarInformación();
