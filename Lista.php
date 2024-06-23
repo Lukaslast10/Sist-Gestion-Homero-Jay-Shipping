@@ -4,13 +4,13 @@
         function __construct(Object ...$elementos){
             $this->contenido = $elementos;
         }
-        function ver(){
+        function get_contenido(){
             return $this->contenido;
         }
 
-        function agregar(Object $elemento){
+        function agregar($elemento){
             array_push($this->contenido, $elemento);
-            return $this->ver();
+            return $this->get_contenido();
         }
 
 
@@ -48,7 +48,7 @@
                 $this->contenido[$posicion] = $objeto_nuevo;
             }
                 
-            return $this->ver();
+            return $this->get_contenido();
         }
 
 
@@ -72,7 +72,7 @@
             }
 
             unset($this->contenido[$posicion]);
-            return $this->ver();
+            return $this->get_contenido();
         }
     }
     

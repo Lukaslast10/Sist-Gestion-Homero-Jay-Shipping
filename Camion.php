@@ -10,7 +10,22 @@ class Camion { # hay que heredar de clase vehiculo con extends
     private $vehiculoTercerizado;
     private $carga;
 
-    public function __construct($empresa, $matricula, $capacidad, $autopartes) {
+    public function __construct($empresa, $matricula, $capacidad, $propio) {
+
+        #si propio es true, se agrega la propiedad autopartes y se crean sus instancias
+        if($propio){
+            $this->autopartes = new Lista(
+                new Autoparte("motor"),
+                new Autoparte("transmision"),
+                new Autoparte("chasis"),
+                new Autoparte("carroceria"),
+                new Autoparte("container"),
+                new Autoparte("rueda_del_izq"),
+                new Autoparte("rueda_del_der"),
+                new Autoparte("rueda_tra_izq"),
+                new Autoparte("rueda_tra_der")
+            );
+        }
         # agregar instancias de  autopartes
         $this->vehiculoPropio = new VehiculoPropio($empresa, $matricula, $capacidad, $autopartes); # quitar
         $this->vehiculoTercerizado = new VehiculoTercerizado($empresa, $matricula, $capacidad); # quitar

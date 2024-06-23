@@ -1,50 +1,39 @@
 <?php
-include_once "./Autopartes.php";
-include_once "./Direccion.php";
+include_once "Autoparte.php";
 include_once "./utils.php";
 
 
-abstract class Vehiculo 
+abstract class Vehiculo
 {
     protected $empresa; 
     protected $matricula;
     protected $capacidad;
     public $ruta;
     public $carga;
-    function __construct(String $empresa, String $matricula, String $capacidad){
+    public $propio;
+    function __construct(String $empresa, String $matricula, String $capacidad, Lista $ruta, Lista $carga){
         
         $this->$empresa;
         $this->$matricula;
         $this->$capacidad;
+        $this->$ruta;
+        $this->$carga;
     }
     
-    function asignar_ruta($ruta){
-
-    }
-    function eliminar_ruta($ruta){
-        # validar entrada de datos
-    }
-    function asignar_carga($carga){
-        # validar entrada de datos
-        
-        # asignar a propiedad carga
-    }
-    function eliminar_carga($carga){
-        # validar entrada de datos
-    }
     function ver_empresa (){
-        return
+        return $this->empresa;
     }
     function ver_matricula(){
-        return
+        return $this->matricula;
     }
     function ver_capacidad (){
-        return
+        return $this->capacidad;
     }
     function realizar_mantenimiento (){
-        return
+        return $this->empresa;
     }
-   
+
+    abstract function salir_a_reparto();
 }
 
 ?>

@@ -1,0 +1,34 @@
+1- Producto
+2- Vehiculo
+3- Autoparte
+4- Lista
+5- Carga
+6- Ruta
+7- Flota
+8- VehiculoPropio
+9- VehiculoTercerizado
+10- Camion
+11- Utilitario
+
+
+
+
+
+clases_pendientes:
+ - Carga - daniela
+ - Ruta - daniela
+
+ - Utilitario
+clases_en_proceso:
+ - Camion - lucas
+ - Utilitario - lucas
+ - Producto - lucas 
+ - VehiculoPropio - pablo
+ - VehiculoTercerizado - pablo
+
+clases_terminadas:
+ - Producto - daniela
+ - Autoparte - joel
+ - Vehiculo - joel
+ - Flota - joel
+ - Lista - joel
