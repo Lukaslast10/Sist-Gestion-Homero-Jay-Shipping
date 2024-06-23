@@ -9,10 +9,10 @@ class Producto{
     
     //constructor para iniciar la clase
     public function __construct($nombre,$cantidad,$peso_unitario,$refrigerado) {
-       $this ->producto = $producto;
+       $this ->nombre = $nombre;
        $this ->cantidad = $cantidad;
-       $this -> peso_unitario = $peso_unitario
-       $this -> refrigerado = $refrigerado
+       $this -> peso_unitario = $peso_unitario;
+       $this -> refrigerado = $refrigerado;
 
     }
         
@@ -26,7 +26,7 @@ class Producto{
          
          //método para quitar producto 
           public function quitar_producto($cantidad){
-            if ($cantidad < 0) {
+            if ($cantidad > $this->cantidad) {
                 throw new Exception(no se puede quitar más cantidad de la disponible");
             
             }
