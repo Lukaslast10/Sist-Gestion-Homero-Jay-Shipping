@@ -1,7 +1,7 @@
 <?php
-    include_once "./Lista.php";
-    include_once "./Autoparte.php";
-    include_once "./utils.php";
+    include_once "../Lista.php";
+    include_once "../Autoparte.php";
+    include_once "../utils.php";
 
      $autopartes = new Lista(
         new Autoparte("motor"), 
