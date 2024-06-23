@@ -1,14 +1,14 @@
-<?php
+<?php # Lucas
 
 class Producto {
-    public $nombre;
-    public $cantidad;
-    private $peso;
-    public $unidad_de_medida;
-    private $refrigerado;
+    public $nombre; # buenas practicas: cuando es public no hace falta poner setters y getters
+    public $cantidad; 
+    private $peso; # error: el peso debe calcularse dinamicamente en funcion del peso unitario y devolver un string uniendo el peso con la unidad de medida
+    public $unidad_de_medida; #debe ser private
+    private $refrigerado; # debe ser public para que la clase vehiculos pueda leerlo
 
     public function __construct(string $nombre, int $cantidad, int $peso, string $unidad_de_medida, bool $refrigerado) {
-        $this->setNombre($nombre);
+        $this->setNombre($nombre); # buenas practicas: en el constructor no se usan setters, se asigna directamente
         $this->setCantidad($cantidad);
         $this->setPeso($peso);
         $this->setUnidadDeMedida($unidad_de_medida);
@@ -46,7 +46,7 @@ class Producto {
         return $this->peso;
     }
 
-    public function setPeso(int $peso): void {
+    public function setPeso(int $peso): void { 
         if ($peso > 0) {
             $this->peso = $peso;
         } else {
@@ -76,4 +76,19 @@ class Producto {
         $this->refrigerado = $refrigerado;
     }
 }
+#instancia
+$producto = new Producto();
+
+#getters
+function getNombre(); # string
+function setNombre(string $nombre); 
+function getCantidad(); # int
+function setCantidad(int $cantidad); #
+function getPeso(); # int
+function setPeso(int $peso); #
+function getUnidadDeMedida(); # string
+function setUnidadDeMedida(string $unidad_de_medida); #
+function getRefrigerado(); # booolean
+function setRefrigerado(bool $refrigerado); #
+#setters
 ?>

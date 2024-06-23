@@ -1,17 +1,20 @@
-<?php
+<?php #Lucas
 
 include_once "./VehiculoTercerizado.php";
 include_once "./VehiculoPropio.php";
 
-class Camiones {
+# testear en archivo a parte llamado test_clase.php
+
+class Camion { # hay que heredar de clase vehiculo con extends
     private $vehiculoPropio;
     private $vehiculoTercerizado;
     private $carga;
 
     public function __construct($empresa, $matricula, $capacidad, $autopartes) {
-        $this->vehiculoPropio = new VehiculoPropio($empresa, $matricula, $capacidad, $autopartes);
-        $this->vehiculoTercerizado = new VehiculoTercerizado($empresa, $matricula, $capacidad);
-        $this->carga = [];
+        # agregar instancias de  autopartes
+        $this->vehiculoPropio = new VehiculoPropio($empresa, $matricula, $capacidad, $autopartes); # quitar
+        $this->vehiculoTercerizado = new VehiculoTercerizado($empresa, $matricula, $capacidad); # quitar
+        $this->carga = []; 
     }
 
     public function asignar_carga($productos) {
