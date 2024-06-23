@@ -1,15 +1,12 @@
-<?php # Lucas
-
-include_once "./Vehiculo.php";
-include_once "./VehiculoPropio.php";
+<?php # Lucas utilitario
 
 class Utilitario extends Vehiculo{ # hay que heredar con extends
-    private $vehiculoPropio;
-    private $vehiculoTercerizado;
+
     private $carga;
 
-    public function __construct($nombreEmpresa, $matricula, $capacidad, Boolean $propio) { # agregar instancias de  autopartes
+    public function __construct($empresa, $matricula, $capacidad, Boolean $propio) { # agregar instancias de  autopartes
 
+        #si propio es true, se agrega la propiedad autopartes y se crean sus instancias
         if($propio){
             $this->autopartes = new Lista(
                 new Autoparte("motor"),
@@ -21,10 +18,9 @@ class Utilitario extends Vehiculo{ # hay que heredar con extends
                 new Autoparte("rueda_del_der"),
                 new Autoparte("rueda_tra_izq"),
                 new Autoparte("rueda_tra_der")
-              );
+            );
         }
-        $this->vehiculoPropio = new VehiculoPropio($nombreEmpresa, $matricula, $capacidad, $autopartes);
-        $this->vehiculoTercerizado = new VehiculoTercerizado($nombreEmpresa, $matricula, $capacidad);
+
         $this->carga = [];
     }
 
