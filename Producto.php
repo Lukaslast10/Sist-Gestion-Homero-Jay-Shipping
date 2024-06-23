@@ -14,9 +14,8 @@ class Producto{
        $this ->nombre = $nombre;
        $this ->cantidad = $cantidad;
        $this -> peso_unitario = $peso_unitario;
-       $this -> peso_total = $peso_unitario * $cantidad;
-
        $this -> refrigerado = $refrigerado;
+       $this -> peso_total = $peso_unitario * $cantidad;
 
     }
         
@@ -46,14 +45,17 @@ class Producto{
          
          // método para mostrar información del producto
          function mostrarinformación () { #debe retornar un
-           echo "nombre" . $this ->nombre . "<br>".
-                "cantidad" . $this ->cantidad . "  " . $this->peso_unitario . "<br>".
+           echo "nombre: " . $this ->nombre . "<br>".
+                "cantidad: " . $this ->cantidad . " * " . $this->peso_unitario . " kg" ."<br>".
                 "refrigerado: " .  $this ->get_refrigerado() . "<br>";
 
          }
       }
       // crear una instancia de la clase Producto
-      $producto = new producto("vehiculo" , 10 , "kg" ,true); //
+      $producto = new producto("helado1" , 10 , 3 ,true); //
+     
+      // crear una instancia de la clase Producto
+      $producto = new producto("helado2" , 5 , 3 ,true); //
       
       //mostrar información del producto
       $producto->mostrarInformación();
